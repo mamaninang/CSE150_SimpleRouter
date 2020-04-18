@@ -25,15 +25,15 @@ class final_topo(Topo):
     s5 = self.addSwitch('s5')   #data center switch
 
     # Create the links that will connect a host to a switch, or connect a switch to another switch
-    self.addLink(s1,h1, port1=1, port2=0)#switch 1 port 1 linked to host 1 port 0
-    self.addLink(s2,h2, port1=1, port2=0)#switch 2 port 1 linked to host 2 port 0
-    self.addLink(s3,h3, port1=1, port2=0)#switch 3 port 1 linked to host 3 port 0
-    self.addLink(s4,h4, port1=4, port2=0)#core switch port 4 linked to Untrusted Host port 0
-    self.addLink(s5,h5, port1=1, port2=0)#data center switch port 1 linked to host 1 port 0
-    self.addLink(s4,s1, port1=1, port2=2)#core switch port 1 connected to switch 1 port 2
-    self.addLink(s4,s2, port1=2, port2=2)#core switch port 2 connected to switch 2 port 2
-    self.addLink(s4,s3, port1=3, port2=2)#core switch port 3 connected to switch 3 port 2
-    self.addLink(s4,s5, port1=5, port2=2)#core switch port 5 connected to switch 5 port 2
+    self.addLink(s1,h1, port1=1, port2=0)     #switch 1 port 1 linked to host 1 port 0
+    self.addLink(s2,h2, port1=1, port2=0)     #switch 2 port 1 linked to host 2 port 0
+    self.addLink(s3,h3, port1=1, port2=0)     #switch 3 port 1 linked to host 3 port 0
+    self.addLink(s4,h4, port1=4, port2=0)     #core switch port 4 linked to Untrusted Host port 0
+    self.addLink(s5,h5, port1=1, port2=0)     #data center switch port 1 linked to host 1 port 0
+    self.addLink(s4,s1, port1=1, port2=2)     #core switch port 1 connected to switch 1 port 2
+    self.addLink(s4,s2, port1=2, port2=2)     #core switch port 2 connected to switch 2 port 2
+    self.addLink(s4,s3, port1=3, port2=2)     #core switch port 3 connected to switch 3 port 2
+    self.addLink(s4,s5, port1=5, port2=2)     #core switch port 5 connected to switch 5 port 2
 
 def configure():
   topo = final_topo()
